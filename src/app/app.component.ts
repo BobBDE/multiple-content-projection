@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Category} from './classes';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'multiple-contents';
+
+  fruits = ['apple', 'kiwi', 'pear', 'strawberry'];
+  advancedFruits: Category[] = [
+    {name: 'fruit', items: [{id: 0, title: 'apple'}, {id: 1, title: 'kiwi'}, {id: 3, title: 'strawberry'}]},
+    {name: 'vegetable', items: [{id: 4, title: 'bean'}, {id: 5, title: 'pumkins'}]}
+  ];
 }

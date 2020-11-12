@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div *ngFor="let category of categories;">
+    <!--  Call the header template for each categories  -->
+    <ng-container *ngTemplateOutlet="headerTemplate; context:getHeaderContext(category)">
+    </ng-container>
+
+    <div *ngFor="let item of category.items; let first = first; let last = last" class="children">
+      <!--  Call the item template for each category's items   -->
+      <ng-container *ngTemplateOutlet="itemTemplate; context: getItemContext(item, first, last)">
+      </ng-container>
+    </div>
+  </div>
+</div>
