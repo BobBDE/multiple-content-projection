@@ -9,7 +9,7 @@ import {Category} from './classes';
 export class AppComponent {
 
   fruits = ['apple', 'kiwi', 'pear', 'strawberry'];
-  advancedFruits: Category[] = [
+  categories: Category[] = [
     {name: 'fruit', items: [{id: 0, title: 'apple'}, {id: 1, title: 'kiwi'}, {id: 3, title: 'strawberry'}]},
     {name: 'vegetable', items: [{id: 4, title: 'bean'}, {id: 5, title: 'pumkins'}]}
   ];

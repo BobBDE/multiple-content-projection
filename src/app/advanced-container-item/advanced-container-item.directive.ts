@@ -1,5 +1,5 @@
 import {Directive, TemplateRef} from '@angular/core';
-import {AdvancedItemContext, Implicit} from '../classes';
+import {AdvancedItemViewContext} from '../classes';
 
 
 @Directive({
@@ -11,5 +11,5 @@ export class AdvancedContainerItemDirective {
    * The template ref is optional but it tells the IDE that this is a structural directive
    * and it tells the implicit object type
    */
-  constructor(private templateRef: TemplateRef<Implicit<AdvancedItemContext>>) {}
+  constructor(private templateRef: TemplateRef<AdvancedItemViewContext>) {}
 }

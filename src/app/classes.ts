@@ -8,14 +8,14 @@ export interface AdvancedItem {
   title: string;
 }
 
-// generic type for the template outlet context
-export interface Implicit<T> {
+// generic type for the view context
+export interface ViewContext<T> {
   $implicit: T;
 }
 
+
 // expected type for the context of item
-export interface AdvancedItemContext {
-  item: AdvancedItem;
+export interface AdvancedItemViewContext extends ViewContext<AdvancedItem> {
   first: boolean;
   last: boolean;
 }

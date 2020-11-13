@@ -13,18 +13,19 @@
 
   <p><strong>Advanced multiple content projection with header and item template</strong></p>
 
-  <app-advanced-container [categories]="advancedFruits">
+  <app-advanced-container [categories]="categories">
     <!--  Define the headers' template   -->
     <div *appAdvancedContainerHeader="let header">
       <h1>{{header}}</h1>
     </div>
 
     <!--  Define the items' template   -->
-    <div *appAdvancedContainerItem="let fruit">
-      <p>id: {{fruit.item.id}}</p>
-      <p>title: {{fruit.item.title}}</p>
-      <p>first: {{fruit.first}}</p>
-      <p>last: {{fruit.last}}</p>
+    <div *appAdvancedContainerItem="let item = $implicit; let first = first; let last = last">
+      <p>id: {{item.id}}</p>
+      <p>title: {{item.title}}</p>
+      <p>first: {{first}}</p>
+      <p>last: {{last}}</p>
     </div>
   </app-advanced-container>
 </div>
+
